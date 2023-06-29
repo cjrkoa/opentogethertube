@@ -23,6 +23,7 @@ import { OttException } from "../common/exceptions";
 import TubiAdapter from "./services/tubi";
 import { Counter } from "prom-client";
 import { conf } from "./ott-config";
+import PlutoAdapter from "./services/pluto";
 
 const log = getLogger("infoextract");
 
@@ -34,6 +35,7 @@ const adapters = [
 	new DirectVideoAdapter(),
 	new RedditAdapter(),
 	new TubiAdapter(),
+	new PlutoAdapter(),
 ];
 
 const ADD_PREVIEW_SEARCH_MIN_LENGTH = conf.get("add_preview.search.min_query_length");

@@ -82,7 +82,7 @@
 			@buffer-spans="onBufferSpans"
 		/>
 		<GenericHlsPlayer
-			v-else-if="!!source && source.service == 'tubi'"
+			v-else-if="!!source && (source.service == 'tubi' || source.service == 'pluto')"
 			ref="player"
 			:videoid="source.id"
 			:hls-url="source.hls_url!"
